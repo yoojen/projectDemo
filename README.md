@@ -35,8 +35,11 @@ Contributors
 We want to express our gratitude to the following contributors who played a significant role in the development of this web app:
 
 Eugene: [Eugene Mutuyimana](https://github.com/yoojen)
+
 Judith: 
+
 Korede: [Korede](https://github.com/Oladetohun1)
+
 Feel free to reach out to them and express your appreciation for their valuable contributions.
 
 Issues and Feedback
