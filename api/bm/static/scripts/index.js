@@ -1,3 +1,5 @@
+/**making link change active class */
+
 btns = document.querySelectorAll('a')
 len = btns.length - 1
 currentlocation = location.href
@@ -6,6 +8,9 @@ for (let i = 0; i <= len; i++) {
         btns[i].className = 'active'
     }
 }
+
+
+/**toggling close and open buttons */
 $('.close-btn').on('click', function () {
     $('.navigation').css("display", "none")
     $(".close-btn").css("display", "none")
@@ -22,6 +27,8 @@ $(".open-btn").on('click', function () {
     $('.content').css("width , 75%")
 })
 
+
+/**updating current balance from the db */
 window.addEventListener("load", () => {
     exp_url = "http://localhost:5000/api/bm/expenses/total"
     inc_url = "http://localhost:5000/api/bm/incomes/total"
