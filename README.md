@@ -34,11 +34,11 @@ Open your browser and go to http://localhost:5000 to access the application.
 Contributors
 We want to express our gratitude to the following contributors who played a significant role in the development of this web app:
 
-Eugene: [Eugene Mutuyimana](https://github.com/yoojen)
+Eugene: [GITUB PROFILE](https://github.com/yoojen)
 
-Judith: 
+Judith: [GITUB PROFILE](https://github.com/Uceetheblackone/)
 
-Korede: [Korede](https://github.com/Oladetohun1)
+Korede: [GITHUB PROFILE](https://github.com/Oladetohun1)
 
 Feel free to reach out to them and express your appreciation for their valuable contributions.
 
