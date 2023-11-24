@@ -29,6 +29,7 @@ class BaseModel:
         return f'{self.id}'
 
     def to_dict(self):
+        """returns dictionary representation of class"""
         instance_dict = self.__dict__
         if '_sa_instance_state' in instance_dict.keys():
             del instance_dict['_sa_instance_state']
