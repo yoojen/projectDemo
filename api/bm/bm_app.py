@@ -23,21 +23,25 @@ reports = []
 
 @app.route('/', strict_slashes=False)
 def homeroute():
+    """render template"""
     return render_template("index.html", reports=reports)
 
 
 @app.route('/reports.html')
 def reports():
+    """render template"""
     return render_template('reports.html')
 
 
 @app.route('/budgeting.html')
 def budgeting():
+    """render template"""
     return render_template('budgeting.html')
 
 
 @app.route('/transaction.html')
 def transaction():
+    """render template"""
     return render_template('transaction.html')
 
 
