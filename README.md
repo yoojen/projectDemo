@@ -1,4 +1,5 @@
 **OVERVIEW**
+<img width="948" alt="Screenshot (43)" src="https://github.com/yoojen/projectDemo/assets/140322568/3636ccd0-b811-415f-b4eb-adf353b39edd">
 
 This web application is a simple yet powerful tool created using HTML, VanillaJS, jQuery, CSS for the frontend, and Flask, SQLAlchemy, and SQLite for the backend.
 The combination of these technologies provides a seamless and responsive user experience while ensuring efficient data handling and storage.
@@ -18,7 +19,7 @@ Clone the Repository:
 
 bash
 Copy code
-`git clone https://github.com/your-username/projectDemo.git`
+`git clone https://github.com/yoojen/projectDemo.git`
 Navigate to the Project Directory:
 
 **BASH CODE** 
