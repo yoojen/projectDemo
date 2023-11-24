@@ -31,6 +31,7 @@ class Plan(Base, BaseModel):
 
 
 class User(BaseModel, Base):
+    """initialize and represent users table in the db"""
     __tablename__ = "users"
     username = Column(String(60), nullable=False)
     email = Column(String(60), nullable=False)
@@ -43,6 +44,7 @@ class User(BaseModel, Base):
     plan = relationship("Plan", backref="planner")
 
     def __init__(self, usrname, email, fname, lname, psd, loc_id):
+        """initialize user table input"""
         self.username = usrname
         self.email = email
         self.fname = fname
@@ -52,17 +54,23 @@ class User(BaseModel, Base):
 
 
 class Location(BaseModel, Base):
+    """initialize and represent location table in the db"""
+
     __tablename__ = 'location'
     country = Column(String(60), nullable=False)
     province = Column(String(60), nullable=False)
     user = relationship('User', backref='location')
 
     def __init__(self, ctr, pr):
+        """initialize location table input"""
+
         self.country = ctr
         self.province = pr
 
 
 class Income(BaseModel, Base):
+    """initialize and represent incomes table in the db"""
+
     __tablename__ = 'incomes'
     name = Column(String(60), nullable=False)
     desc = Column(String(60))
@@ -72,6 +80,8 @@ class Income(BaseModel, Base):
         'categories.id'), nullable=False)
 
     def __init__(self, name, desc, amt, usrid, ctid):
+        """initialize incomes table input"""
+
         self.name = name
         self.desc = desc
         self.amount = amt
@@ -83,6 +93,8 @@ class Income(BaseModel, Base):
 
 
 class Expense(BaseModel, Base):
+    """initialize and represent expenses table in the db"""
+
     __tablename__ = 'expenses'
     name = Column(String(60), nullable=False)
     desc = Column(String(60), nullable=True)
@@ -91,6 +103,8 @@ class Expense(BaseModel, Base):
     category_id = Column(Integer, ForeignKey('categories.id'), nullable=False)
 
     def __init__(self, name, desc, amt, usrid, ctid):
+        """initialize expenses table input"""
+
         self.name = name
         self.amount = amt
         self.desc = desc
@@ -102,6 +116,8 @@ class Expense(BaseModel, Base):
 
 
 class Category(BaseModel, Base):
+    """initialize and represent categories table in the db"""
+
     __tablename__ = 'categories'
     type = Column(String(60), nullable=False)
     expense = relationship("Expense", backref="spend")
@@ -109,4 +125,6 @@ class Category(BaseModel, Base):
     plans = relationship("Plan", backref="categories")
 
     def __init__(self, name):
+        """initialize category table input"""
+
         self.type = name
