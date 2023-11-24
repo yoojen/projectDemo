@@ -1,11 +1,11 @@
+/**grabing html elements */
 form = document.querySelector('#addtransform')
 table = document.querySelector('#columntitles')
 tableData = document.querySelector('#column-data')
 filterOptions = document.querySelector('#filter-option')
-console.log(table, tableData, filterOptions)
 type = null
 
-
+/**handling change on input box */
 filterOptions.addEventListener("change", () => {
     if (filterOptions.value === "incomes") {
         type = "incomes"
