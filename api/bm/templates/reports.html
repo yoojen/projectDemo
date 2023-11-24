@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="../static/styles/nav.css">
+    <link rel="stylesheet" href="../static/styles/common.css">
+    <link rel="stylesheet" href="../static/styles/reports.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script defer src="../static/scripts/index.js"></script>
+    <script defer src="../static/scripts/reports/index.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="controls">
+            <div class="open-btn">
+
+                <img src="../static/images/downarrow1.png" alt="">
+            </div>
+            <div class="close-btn">
+                <img src="../static/images/close_button_normal.png" alt="">
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="logo">
+                <img src="../static/images/budget.png" alt="">
+                <p>BudgetBoss</p>
+            </div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="/">Dashboard</a></li>
+                    <li><a href="transaction.html">Transactions</a></li>
+                    <li><a href="budgeting.html">Budgetinng</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </nav>
+
+            <div class="balance">
+                <small>Current budget</small>
+                <h2 id="balance">$500.00</h2>
+                <small id="username">username</small>
+            </div>
+        </div>
+        <div class="content">
+            <div class="income-expense">
+                <div class="income-reports">
+                    <h1 style="text-transform: uppercase;">Select Type</h1>
+                    <div class="filter-options">
+                        <select name="filter-type" id="filter-type">
+                            <option value="">select type</option>
+                            <option value="incomes">
+                                <h4>Incomes</h4>
+                            </option>
+                            <option value="expenses">
+                                <h4>Expenses</h4>
+                            </option>
+
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="filter-collections">
+                <div class="single-filter">
+                    <div class="filter">
+                        <form action="" id="nameForm">
+                            <label for="filter-choice">
+                                Filter by Name
+                            </label>
+                            <input type="text" name="" id="nameInput">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                    <table id="columntitles">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                    <table id="column-data-name">
+
+                    </table>
+                    </table>
+                </div>
+                <div class="single-filter">
+                    <div class="filter">
+                        <form action="" id="categoryForm">
+                            <label for="filter-choice">
+                                Filter by category
+                            </label>
+                            <select name="category-select" id="category-select">
+                                <option value="1">sales</option>
+                                <option value="1">gift</option>
+                            </select>
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                    <table id="columntitles">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table id="column-data-category">
+
+                    </table>
+                </div>
+                <div class="single-filter">
+                    <div class="filter">
+                        <form action="" id="lessGreater">
+                            <label for="filter-choice">
+                                Filter by Amount
+                            </label>
+                            <select name="amount-select" id="amount-select">
+                                <option value="less">Less Than</option>
+                                <option value="greater">Greater Than</option>
+                            </select>
+                            <input type="number" name="amount" id="amount">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                    <table id="columntitles">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table id="column-data-amount">
+
+                    </table>
+                </div>
+                <div class="single-filter">
+                    <div class="filter">
+                        <form action="" id="filterByDate">
+                            <label for="filter-choice">
+                                Filter by date range
+                            </label>
+                            <input type="date" name="" id="start-date">
+                            <input type="date" name="" id="end-date">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                    <table id="columntitles">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table id="column-data-date">
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

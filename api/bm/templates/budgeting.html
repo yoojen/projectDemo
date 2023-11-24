@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeting</title>
+    <!-- <link rel="stylesheet" href="../styles/style_2.css"> -->
+    <link rel="stylesheet" href="../static/styles/content.css">
+    <link rel="stylesheet" href="../static/styles/budgeting.css">
+    <link rel="stylesheet" href="../static/styles/nav.css">
+    <link rel="stylesheet" href="../static/styles/common.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script defer src="../static/scripts/index.js"></script>
+    <script defer src="../static/scripts/index_2.js"></script>
+    <script defer src="../static/scripts/budeting/budget.js"></script>
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="controls">
+            <div class="open-btn">
+                <img src="../static/images/downarrow1.png" alt="">
+            </div>
+            <div class="close-btn">
+                <img src="../static/images/close_button_normal.png" alt="">
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="logo">
+                <img src="../static/images/budget.png" alt="">
+                <p>BudgetBoss</p>
+            </div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="/">Dashboard</a></li>
+                    <li><a href="transaction.html">Transactions</a></li>
+                    <li><a href="budgeting.html">Budgeting</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </nav>
+            <div class="balance">
+                <small>Current budget</small>
+                <h2 id="balance">$500.00</h2>
+                <small id="username">username</small>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="expenses">
+                <h1 id="add-holder">
+                    MAKE FUTURE PLAN
+                    <!-- <button id="add-many" onclick="addmany()">Add Multiple</button> -->
+                </h1>
+                <form method="POST" id="onebyone">
+                    <div class="single-item">
+                        <label for="">Expense</label>
+                        <input type="text" name="" id="expense_name" required>
+                    </div>
+
+                    <div class="single-item">
+                        <label for="">Amount</label>
+                        <input type="text" name="" id="expense_amount" required>
+                    </div>
+                    <div class="single-item">
+                        <label for="" style="margin-bottom: 5px;">Select Category</label>
+                        <select name="" id="expense_category_type" required>
+                            <option value="">select category</option>
+                            <option value="1">Transport</option>
+                            <option value="2">Shopping</option>
+                        </select>
+                    </div>
+
+                    <div class="single-item">
+                        <label for="">Description</label>
+                        <input type="text" name="" id="description" placeholder="not necessary">
+                    </div>
+                    <div class="single-item">
+                        <button type="submit">Add To List</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-expense">
+                <!-- <div class="recent">
+                    <form action="" id="addmany">
+                        <table>
+                            <tr>
+                                <th>expense</th>
+                                <th>amount</th>
+                                <th>category</th>
+                                <th>description</th>
+                            </tr>
+
+                            <tr>
+                                <td><input type="text" name="expenseNameMany" id="" required></td>
+                                <td><input type="text" name="expenseAmountMany" id="" required></td>
+                                <td>
+                                    <select name="expenseCategoryMany" id="" style="width: 100%;" required>
+                                        <option value="">select category</option>
+                                        <option value="1">Transport</option>
+                                        <option value="2">Shopping</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <textarea name="expenseDescriptionMany" id="" cols="30" rows="1"></textarea>
+                            </tr>
+
+                        </table>
+                        <div class="single-item">
+                            <button type="submit" style="width: 20%;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+            </div>
+            <div class="list-items">
+                <div class="items">
+                    <table id="planned-list">
+                        <tr>
+                            <th>Activity</th>
+                            <th>estimated spending</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

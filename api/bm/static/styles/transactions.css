@@ -1,0 +1,14 @@
+.table-visualization {
+    /* overflow-y: scroll; */
+    border-radius: 5px;
+
+    background-color: green;
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.content{
+    overflow-y: scroll;
+}

@@ -1,0 +1,121 @@
+.incomes{
+    width:35%;
+    /* border-right: 1px solid black; */
+    margin-right: 12px;
+}
+.expenses {
+    width: 30%;
+}
+
+.single-item {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.wrapper{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper select {
+    width: 50%;
+    margin: 0 5px 0 0;
+    padding: 5px;
+}
+.single-item label {
+    font-size: 20px;
+    font-family: consolas;
+}
+
+.single-item button {
+    margin-top: 0px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(12, 194, 12);
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.single-item button:hover {
+    background-color: #4CAF50;
+}
+input {
+    color: gray;
+}
+.single-item input {
+    padding: 0 10px;
+    height: 30px;
+    outline: none;
+    border: none;
+    color: gray;
+}
+
+.recent-income {
+    margin-top: 5vh;
+    width: 60%;
+    text-transform: uppercase;
+}
+
+.recent h1 {
+    text-align: center;
+}
+
+.incomes h1, .expenses h1 {
+    text-align: center;
+}
+
+table {
+    text-transform: capitalize;
+    background-color: white;
+    text-align: center;
+    width: 95%;
+    border-collapse: collapse;
+}
+
+table th {
+    text-transform: uppercase;
+}
+
+th {
+    color: white;
+    background-color: #4CAF50;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    width: 33.3%;
+    border-bottom: 1px solid lightgrey;
+}
+
+table tr {
+    width: 33.3%;
+}
+
+.arrow {
+    position: absolute;
+    right: 40px;
+}
+
+.arrow a {
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+.arrow span {
+    font-size: 20px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+
+    <link rel="stylesheet" href="../static/styles/nav.css">
+    <link rel="stylesheet" href="../static/styles/common.css">
+    <link rel="stylesheet" href="../static/styles/content.css">
+    <link rel="stylesheet" href="../static/styles/transactions.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script defer src="../static/scripts/index.js"></script>
+    <script defer src="../static/scripts/transactions/index.js"></script>
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="controls">
+            <div class="open-btn">
+                <img src="../static/images/downarrow1.png" alt="">
+            </div>
+            <div class="close-btn">
+                <img src="../static/images/close_button_normal.png" alt="">
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="logo">
+                <img src="../static/images/budget.png" alt="">
+                <p>BudgetBoss</p>
+            </div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="/">Dashboard</a></li>
+                    <li><a href="transaction.html">Transactions</a></li>
+                    <li><a href="budgeting.html">Budgetinng</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </nav>
+            <div class="balance">
+                <small>Current budget</small>
+                <h2 id="balance">$500.00</h2>
+                <small id="username">username</small>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="incomes">
+                <h1>ADD NEW TRANSACTION</h1>
+                <form action="http://localhost:5000/api/bm/expenses" method="POST" id="addtransform">
+                    <div class="single-item">
+                        <label for="">Account Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+
+                    <div class="single-item">
+                        <label for="">Amount</label>
+                        <input type="text" name="amount" id="amount">
+                    </div>
+                    <div class="single-item">
+                        <label for="">Category</label>
+                        <div class="wrapper">
+                            <select name="category" id="category">
+                                <option value="1">Transport</option>
+                                <option value="2">Shopping</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="single-item">
+                        <label for="">Type</label>
+                        <select name="typeselect" id="typeselect">
+                            <option value="incomes">Income</option>
+                            <option value="expenses">Expense</option>
+                        </select>
+                    </div>
+                    <div class="single-item">
+                        <label for="">Descrition</label>
+                        <input type="text" name="desc" id="desc">
+                    </div>
+                    <div class="single-item">
+                        <button type="submit">Add Transaction</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="recent-income">
+                <div class="recent">
+                    <h1>Recent Transactions</h1>
+                    <p style="text-transform: capitalize;">Filter By
+                        <select name="" id="filter-option">
+                            <option value=""></option>
+                            <option value="expenses">Expenses</option>
+                            <option value="incomes">Incomes</option>
+                        </select>
+                    </p>
+                    <div class="table-visualization">
+                        <table id="columntitles">
+                            <thead>
+                                <tr>
+                                    <th>Income</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+
+
+                        </table>
+                        <table id="column-data">
+                        </table>
+
+                    </div>
+                    <a href="reports.html">view more</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

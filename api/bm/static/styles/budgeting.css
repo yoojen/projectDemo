@@ -1,0 +1,18 @@
+
+.table-expense {
+    margin-top: 5vh;
+    width: 75%;
+    text-transform: uppercase;
+}
+
+.recent {
+    visibility: collapse;
+}
+
+
+.list-items {
+    margin-top: 10%;
+    position: absolute;
+    top: 30px;
+    left: 45%;
+}
