@@ -16,11 +16,8 @@ filterOptions.addEventListener("change", () => {
     fetchApi(url)
 })
 
+/**fetch api data */
 const fetchApi = async (url) => {
-    // if (e.target.value == "") {
-    //     less.innerHTML += "can't not work"
-    //     return
-    // } else {
     if (filterOptions.value === "Incomes") {
         type = "incomes"
     } else {
@@ -41,7 +38,7 @@ const fetchApi = async (url) => {
                 `
             });
         })
-    // }
+
 }
 
 form.addEventListener("submit", (e) => {
