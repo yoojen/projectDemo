@@ -27,6 +27,8 @@ def planings():
         return jsonify(get_object(Plan))
 
 
+"""commented because they are yet to be done
+comming up in futue"""
 # @bm_views.route('/expenses/<string:name>',  strict_slashes=False)
 # def expense_byName(name):
 #     """return expense based on ID"""

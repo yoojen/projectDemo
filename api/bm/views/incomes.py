@@ -78,6 +78,7 @@ def incomeMatchingCategoryId(category_id):
 
 @bm_views.route('/incomes/<int:income_id>/category')
 def incomes_category(income_id):
+    """returns category of a certain income """
     earned = find_exp_category(Income, income_id)
     if type(earned) is not list:
         return jsonify({str(earned.name): [{"category": str(earned.revenue.type)}]})
@@ -86,17 +87,20 @@ def incomes_category(income_id):
 
 @bm_views.route('/incomes/amt_gt/<int:amount>')
 def get_income_amt_gt(amount):
+    """return expenses which amount is greater than inputs"""
     all_items = amount_gt(Income, amount, "income")
     return jsonify(all_items)
 
 
 @bm_views.route('/incomes/amt_lt/<int:amount>')
 def get_income_amt_lt(amount):
+    """return expenses where amount is less than input"""
     all_items = amount_lt(Income, amount, "income")
     return jsonify(all_items)
 
 
 @bm_views.route('/incomes/date/<string:date_range_1>/<string:date_range_2>')
 def filter_income_by_date(date_range_1, date_range_2):
+    """returns expenses in a certain date range"""
     data = filter_obj_byDate(Income, date_range_1, date_range_2)
     return jsonify(data)

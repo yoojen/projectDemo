@@ -1,4 +1,3 @@
-from flask import request
 from api.bm.views import bm_views
 from models.engine import *
 from flask import jsonify
@@ -22,7 +21,8 @@ def category_byId(category_id):
     return jsonify(get_objectByID(Category, category_id))
 
 
-@bm_views.route('/categories/date/<string:date_range_1>/<string:date_range_2>')
+@bm_views.route('/categories/date/<string:date_range_1>/<string:date_range_2>', strict_slashes=False)
 def filter_category_by_date(date_range_1, date_range_2):
+    """returns a category based on date range"""
     data = filter_obj_byDate(Category, date_range_1, date_range_2)
     return jsonify(data)
