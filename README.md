@@ -33,7 +33,7 @@ Open your browser and go to http://localhost:5000 to access the application.
 Contributors
 We want to express our gratitude to the following contributors who played a significant role in the development of this web app:
 
-Eugene: [https://](https://github.com/yoojen)
+Eugene: [Eugene Mutuyimana](https://github.com/yoojen)
 Judith: 
 Korede:
 Feel free to reach out to them and express your appreciation for their valuable contributions.
